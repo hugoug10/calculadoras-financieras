@@ -44,30 +44,38 @@
 .form-group {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.6rem;
 }
 
 .form-group label {
   font-weight: 600;
   color: var(--text);
   font-size: 0.95rem;
+  letter-spacing: -0.2px;
 }
 
 input, select {
-  padding: 0.8rem 1rem;
-  border: 2px solid var(--border);
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--input-border);
   border-radius: var(--radius-sm);
   font-family: inherit;
   font-size: 1rem;
-  transition: border-color 0.2s, box-shadow 0.2s;
-  background: white;
+  background: var(--input-bg);
+  color: var(--text);
+  transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
   width: 100%;
+}
+
+input:hover, select:hover {
+  border-color: rgba(139, 92, 246, 0.4);
 }
 
 input:focus, select:focus {
   outline: none;
   border-color: var(--primary);
-  box-shadow: 0 0 0 3px rgba(118, 116, 255, 0.2);
+  background: white;
+  box-shadow: 0 0 0 4px var(--input-ring);
+  transform: translateY(-1px);
 }
 
 .input-with-symbol {
@@ -89,15 +97,29 @@ input:focus, select:focus {
 
 /* Panel Resultados */
 .results-panel {
-  background: linear-gradient(180deg, white, var(--bg));
-  border: 2px solid var(--primary);
+  background: linear-gradient(145deg, var(--surface), white);
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-md);
+  position: relative;
+  overflow: hidden;
+}
+
+.results-panel::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
 }
 
 .results-panel h2 {
-  font-size: 1.25rem;
-  color: var(--text-muted);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--primary);
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
 }
 
 .result-highlight {
@@ -156,21 +178,27 @@ input:focus, select:focus {
 }
 
 .btn-primary {
-  background: var(--primary);
+  background: linear-gradient(135deg, var(--primary), var(--primary-hover));
   color: white;
   border: none;
-  padding: 1rem;
+  padding: 1.1rem;
   border-radius: var(--radius-sm);
-  font-size: 1rem;
+  font-size: 1.05rem;
   font-weight: 600;
+  letter-spacing: 0.5px;
   cursor: pointer;
-  transition: background 0.2s, transform 0.2s;
+  transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
   text-align: center;
+  box-shadow: 0 4px 15px hsla(256, 85%, 55%, 0.25);
 }
 
 .btn-primary:hover {
-  background: var(--primary-hover);
-  transform: translateY(-2px);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px hsla(256, 85%, 55%, 0.35);
+}
+
+.btn-primary:active {
+  transform: translateY(-1px);
 }
 
 
