@@ -1,0 +1,26 @@
+/* Extensiones adicionales a SueldoNeto.css para Autónomos */
+
+.checkbox-group {
+  margin-top: 1rem;
+  background: rgba(255,255,255,0.5);
+  padding: 1rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+}
+
+.checkbox-label {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center;
+  gap: 0.8rem;
+  cursor: pointer;
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: auto;
+  accent-color: var(--primary);
+  width: 1.2rem;
+  height: 1.2rem;
+  min-width: 1.2rem;
+  cursor: pointer;
+}
