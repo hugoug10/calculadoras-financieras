@@ -7,6 +7,7 @@ import InteresCompuesto from './pages/InteresCompuesto';
 import Iva from './pages/Iva';
 import Legal from './pages/Legal';
 import CookieBanner from './components/CookieBanner';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
             <Route path="/legal" element={<Legal />} />
           </Routes>
         </main>
+        <Footer />
         <CookieBanner />
       </div>
     </Router>
