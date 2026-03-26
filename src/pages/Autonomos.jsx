@@ -50,7 +50,7 @@ const Autonomos = () => {
     { name: 'Cuota de Autónomo', value: parseFloat(resultados.cuota) },
     { name: 'IRPF', value: parseFloat(resultados.irpf) }
   ];
-  const COLORS = ['#10b981', '#6b7280', '#f59e0b', '#ef4444'];
+  const COLORS = ['#10B981', '#64748B', '#F5A623', '#F43F5E'];
 
   return (
     <div className="calc-container animation-fade">

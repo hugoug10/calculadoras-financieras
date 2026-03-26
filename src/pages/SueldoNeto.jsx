@@ -57,7 +57,7 @@ const SueldoNeto = () => {
     { name: 'Seguridad Social', value: parseFloat(resultados.ss) },
     { name: 'IRPF', value: parseFloat(resultados.irpfTotal) }
   ];
-  const COLORS = ['#10b981', '#f59e0b', '#ef4444'];
+  const COLORS = ['#10B981', '#F5A623', '#F43F5E'];
 
   return (
     <div className="calc-container animation-fade">

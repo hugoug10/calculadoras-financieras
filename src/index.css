@@ -1,25 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
 
 :root {
-  /* FinanCalc Ultra-Premium Dark Tokens */
-  --primary: #10b981; /* Emerald */
-  --primary-hover: #059669;
-  --secondary: #3b82f6; /* Blue */
-  --bg: #000000;
+  /* FinanCalc Fintech Premium Tokens */
+  --primary: #F5A623; /* Gold */
+  --primary-hover: #E09612;
+  --secondary: #4A90E2; /* Corporate Blue */
+  --bg: #090E17; /* Deep Midnight Blue */
   
-  --surface: #0a0a0a;
-  --bg-input: #1a1a1a;
-  --text: #ededed;
-  --text-muted: #a1a1aa;
-  --text-secondary: #71717a;
-  --border: #27272a;
-  --border-light: rgba(255, 255, 255, 0.1);
-  --border-focus: rgba(16, 185, 129, 0.3);
+  --surface: #111827; /* Rich Slate */
+  --bg-input: #1F2937; /* Lighter Slate for inputs */
+  --text: #F8FAFC;
+  --text-muted: #94A3B8;
+  --text-secondary: #CBD5E1;
+  --border: rgba(255, 255, 255, 0.05);
+  --border-light: rgba(255, 255, 255, 0.12);
+  --border-focus: rgba(245, 166, 35, 0.4);
   
-  --danger: #ef4444;       
-  --warning: #f59e0b;      
-  --success: #10b981;
-  --info: #3b82f6;
+  --danger: #F43F5E;       
+  --warning: #F5A623;      
+  --success: #10B981;
+  --info: #3B82F6;
 
   --radius-sm: 8px;
   --radius-md: 16px;
@@ -35,9 +35,9 @@
 body {
   font-family: 'Outfit', system-ui, -apple-system, sans-serif;
   background-color: var(--bg);
-  /* Subtle mesh gradient background for extreme luxury */
-  background-image: radial-gradient(circle at 15% -20%, rgba(16, 185, 129, 0.15), transparent 40%),
-                    radial-gradient(circle at 85% 30%, rgba(59, 130, 246, 0.08), transparent 40%);
+  /* Fintech subtle mesh background */
+  background-image: radial-gradient(ellipse at top right, rgba(74, 144, 226, 0.12), transparent 40%),
+                    radial-gradient(ellipse at bottom left, rgba(245, 166, 35, 0.08), transparent 40%);
   background-attachment: fixed;
   color: var(--text);
   line-height: 1.6;
@@ -49,7 +49,7 @@ body {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 10px 40px -10px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.05);
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
