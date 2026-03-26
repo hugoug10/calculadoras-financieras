@@ -1,25 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
 
 :root {
-  /* Ultra-Premium Design Tokens */
-  --primary: hsl(256, 85%, 55%);
-  --primary-hover: hsl(256, 85%, 45%);
-  --secondary: hsl(325, 85%, 55%);
-  --bg: hsl(225, 30%, 98%);
+  /* FinanCalc Ultra-Premium Dark Tokens */
+  --primary: #10b981; /* Emerald */
+  --primary-hover: #059669;
+  --secondary: #3b82f6; /* Blue */
+  --bg: #000000;
   
-  --surface: rgba(255, 255, 255, 0.75);
-  --text: hsl(225, 20%, 15%);
-  --text-muted: hsl(225, 15%, 45%);
-  --border: rgba(0, 0, 0, 0.04);
-  --border-light: rgba(255, 255, 255, 0.6);
+  --surface: #0a0a0a;
+  --bg-input: #1a1a1a;
+  --text: #ededed;
+  --text-muted: #a1a1aa;
+  --text-secondary: #71717a;
+  --border: #27272a;
+  --border-light: rgba(255, 255, 255, 0.1);
+  --border-focus: rgba(16, 185, 129, 0.3);
   
-  --radius-sm: 10px;
-  --radius-md: 18px;
-  --radius-lg: 28px;
-  
-  --shadow-sm: 0 4px 6px -1px rgb(0 0 0 / 0.03), 0 2px 4px -2px rgb(0 0 0 / 0.03);
-  --shadow-md: 0 12px 30px -4px rgb(0 0 0 / 0.06), 0 4px 10px -2px rgb(0 0 0 / 0.03);
-  --shadow-lg: 0 24px 50px -10px rgb(0 0 0 / 0.08);
+  --danger: #ef4444;       
+  --warning: #f59e0b;      
+  --success: #10b981;
+  --info: #3b82f6;
+
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
 }
 
 * {
@@ -32,9 +36,8 @@ body {
   font-family: 'Outfit', system-ui, -apple-system, sans-serif;
   background-color: var(--bg);
   /* Subtle mesh gradient background for extreme luxury */
-  background-image: 
-    radial-gradient(circle at 15% 50%, rgba(99, 102, 241, 0.06) 0%, transparent 50%),
-    radial-gradient(circle at 85% 30%, rgba(236, 72, 153, 0.06) 0%, transparent 50%);
+  background-image: radial-gradient(circle at 15% -20%, rgba(16, 185, 129, 0.15), transparent 40%),
+                    radial-gradient(circle at 85% 30%, rgba(59, 130, 246, 0.08), transparent 40%);
   background-attachment: fixed;
   color: var(--text);
   line-height: 1.6;
@@ -44,10 +47,10 @@ body {
 /* Glassmorphism Refined 2.0 */
 .glass {
   background: var(--surface);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
-  border: 1px solid var(--border-light);
-  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .app-container {
@@ -72,6 +75,20 @@ a {
 input, select, button {
   font-family: inherit;
   transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+input, select {
+  background: var(--bg-input);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 0.875rem 1rem;
+  border-radius: var(--radius-sm);
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px var(--border-focus);
 }
 
 

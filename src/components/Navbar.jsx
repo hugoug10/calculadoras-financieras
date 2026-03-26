@@ -14,6 +14,7 @@ const Navbar = () => {
           <Link to="/" className="nav-link">Inicio</Link>
           <Link to="/sueldo-neto" className="nav-link">Sueldo Neto</Link>
           <Link to="/autonomos" className="nav-link">Autónomos</Link>
+          <Link to="/interes" className="nav-link">Interés Compuesto</Link>
         </div>
       </div>
     </nav>

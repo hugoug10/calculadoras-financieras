@@ -3,7 +3,10 @@ import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import SueldoNeto from './pages/SueldoNeto';
 import Autonomos from './pages/Autonomos';
+import InteresCompuesto from './pages/InteresCompuesto';
 import Iva from './pages/Iva';
+import Legal from './pages/Legal';
+import CookieBanner from './components/CookieBanner';
 
 function App() {
   return (
@@ -15,9 +18,12 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/sueldo-neto" element={<SueldoNeto />} />
             <Route path="/autonomos" element={<Autonomos />} />
+            <Route path="/interes" element={<InteresCompuesto />} />
             <Route path="/iva" element={<Iva />} />
+            <Route path="/legal" element={<Legal />} />
           </Routes>
         </main>
+        <CookieBanner />
       </div>
     </Router>
   );

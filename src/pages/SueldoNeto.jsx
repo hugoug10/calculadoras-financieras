@@ -1,10 +1,27 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from 'recharts';
 import './SueldoNeto.css';
 
 const SueldoNeto = () => {
   const [bruto, setBruto] = useState(25000);
   const [pagas, setPagas] = useState(12);
   const [edad, setEdad] = useState(30);
+
+  useEffect(() => {
+    const saved = localStorage.getItem('financalc_sueldo');
+    if (saved) {
+      try {
+        const data = JSON.parse(saved);
+        if (data.bruto) setBruto(data.bruto);
+        if (data.pagas) setPagas(data.pagas);
+        if (data.edad) setEdad(data.edad);
+      } catch (e) {}
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem('financalc_sueldo', JSON.stringify({ bruto, pagas, edad }));
+  }, [bruto, pagas, edad]);
   
   // Cálculo simplificado de ejemplo (IRPF progresivo y SS)
   const calcularNeto = () => {
@@ -34,6 +51,13 @@ const SueldoNeto = () => {
   };
 
   const resultados = calcularNeto();
+
+  const chartData = [
+    { name: 'Sueldo Neto Anual', value: parseFloat(resultados.netoAnual) },
+    { name: 'Seguridad Social', value: parseFloat(resultados.ss) },
+    { name: 'IRPF', value: parseFloat(resultados.irpfTotal) }
+  ];
+  const COLORS = ['#10b981', '#f59e0b', '#ef4444'];
 
   return (
     <div className="calc-container animation-fade">
@@ -86,6 +110,23 @@ const SueldoNeto = () => {
             <span className="result-amount">{new Intl.NumberFormat('es-ES').format(resultados.netoMensual)} €</span>
             <span className="result-period">/ mes</span>
           </div>
+
+          <div style={{ height: '220px', width: '100%', marginTop: '1.5rem', marginBottom: '1rem' }}>
+            <ResponsiveContainer>
+              <PieChart>
+                <Pie data={chartData} innerRadius={65} outerRadius={85} paddingAngle={4} dataKey="value" stroke="none">
+                  {chartData.map((entry, index) => (
+                    <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                  ))}
+                </Pie>
+                <Tooltip 
+                  formatter={(value) => new Intl.NumberFormat('es-ES').format(value) + ' €'} 
+                  contentStyle={{ backgroundColor: 'var(--bg)', borderColor: 'var(--border)', borderRadius: '8px', color: 'var(--text)' }}
+                  itemStyle={{ color: 'var(--text)' }}
+                />
+              </PieChart>
+            </ResponsiveContainer>
+          </div>
           
           <div className="results-breakdown">
             <div className="breakdown-item">
@@ -110,6 +151,18 @@ const SueldoNeto = () => {
         </div>
       </div>
       
+      {/* SEO INFO */}
+      <div className="glass" style={{ marginTop: '3rem', padding: '2rem', borderRadius: 'var(--radius-lg)' }}>
+        <h2 style={{ fontSize: '1.25rem', marginBottom: '1rem', color: 'var(--primary)' }}>¿Cómo calculamos tu Sueldo Neto?</h2>
+        <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem', marginBottom: '1rem' }}>
+          Para calcular tu sueldo neto, deducimos de tu <strong>Sueldo Bruto</strong> las aportaciones a la Seguridad Social (entorno al 6.35% según contingencias) y la retención del IRPF. 
+          El IRPF es progresivo, lo que significa que el porcentaje de impuestos sube por tramos a medida que ganas más dinero.
+        </p>
+        <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem' }}>
+          Tener un buen sueldo bruto es fantástico, pero los impuestos (representados en rojo y naranja en nuestro gráfico de dona) reducen la cantidad real que llega a tu banco. Planifica tu economía basándote siempre en tu Sueldo Neto mensual.
+        </p>
+      </div>
+
     </div>
   );
 };
