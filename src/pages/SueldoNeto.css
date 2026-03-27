@@ -73,8 +73,8 @@ input:hover, select:hover {
 input:focus, select:focus {
   outline: none;
   border-color: var(--primary);
-  background: white;
-  box-shadow: 0 0 0 4px var(--input-ring);
+  background: var(--bg);
+  box-shadow: 0 0 0 2px var(--border-focus);
   transform: translateY(-1px);
 }
 
