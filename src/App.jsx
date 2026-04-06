@@ -6,7 +6,6 @@ import Autonomos from './pages/Autonomos';
 import InteresCompuesto from './pages/InteresCompuesto';
 import Iva from './pages/Iva';
 import SobreNosotros from './pages/SobreNosotros';
-import Contacto from './pages/Contacto';
 import AvisoLegal from './pages/AvisoLegal';
 import Privacidad from './pages/Privacidad';
 import Cookies from './pages/Cookies';
@@ -26,7 +25,6 @@ function App() {
             <Route path="/interes" element={<InteresCompuesto />} />
             <Route path="/iva" element={<Iva />} />
             <Route path="/sobre-nosotros" element={<SobreNosotros />} />
-            <Route path="/contacto" element={<Contacto />} />
             <Route path="/aviso-legal" element={<AvisoLegal />} />
             <Route path="/privacidad" element={<Privacidad />} />
             <Route path="/cookies" element={<Cookies />} />

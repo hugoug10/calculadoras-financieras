@@ -10,7 +10,6 @@ const Footer = () => {
         
         <div className="footer-links" style={{ display: 'flex', gap: '15px', flexWrap: 'wrap', justifyContent: 'center', marginTop: '10px' }}>
           <Link to="/sobre-nosotros">Sobre Nosotros</Link>
-          <Link to="/contacto">Contacto</Link>
           <Link to="/aviso-legal">Aviso Legal</Link>
           <Link to="/privacidad">Privacidad</Link>
           <Link to="/cookies">Cookies</Link>

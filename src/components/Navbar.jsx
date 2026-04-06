@@ -17,7 +17,6 @@ const Navbar = () => {
           <Link to="/interes" className="nav-link">Interés Compuesto</Link>
           <div style={{width:'1px', height:'20px', backgroundColor:'var(--border)', margin:'0 10px'}}></div>
           <Link to="/sobre-nosotros" className="nav-link" style={{color:'var(--primary)'}}>Sobre Nosotros</Link>
-          <Link to="/contacto" className="nav-link" style={{color:'var(--primary)'}}>Contacto</Link>
         </div>
       </div>
     </nav>
