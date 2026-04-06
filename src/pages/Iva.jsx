@@ -118,6 +118,60 @@ const Iva = () => {
           }}>Copiar Resultados</button>
         </div>
       </div>
+      {/* EXPANSIÓN DE CONTENIDO PARA SEO Y ADSENSE */}
+      <div className="seo-content glass" style={{ marginTop: '4rem', padding: '2.5rem', borderRadius: 'var(--radius-lg)', textAlign: 'left' }}>
+        <h2 style={{ fontSize: '1.5rem', marginBottom: '1.5rem', color: 'var(--primary)' }}>¿Qué es el IVA y cómo afecta a tus facturas?</h2>
+        
+        <p style={{ color: 'var(--text-muted)', lineHeight: '1.7', marginBottom: '1.5rem' }}>
+          El <strong>Impuesto sobre el Valor Añadido (IVA)</strong> es un impuesto indirecto que grava el consumo de bienes y servicios en España (y en casi toda la Unión Europea). 
+          Decimos que es "indirecto" porque no lo pagas directamente a Hacienda según tus ingresos (como el IRPF), sino que lo abonas al comprar un producto o contratar un servicio, 
+          y es el vendedor (autónomo o empresa) quien tiene la obligación de recaudarlo y entregarlo a la administración Tributaria (Hacienda) trimestralmente.
+        </p>
+
+        <h3 style={{ fontSize: '1.25rem', marginBottom: '1rem', color: 'var(--text)' }}>Tipos de IVA aplicables en España (Península y Baleares)</h3>
+        <ul style={{ color: 'var(--text-muted)', lineHeight: '1.6', marginBottom: '1.5rem', paddingLeft: '1.5rem' }}>
+          <li>
+            <strong>IVA General (21%):</strong> Es el tipo por defecto que se aplica a la inmensa mayoría de productos y servicios: tecnología, ropa, vehículos, servicios profesionales, electricidad, telefonía, etc.
+          </li>
+          <li>
+            <strong>IVA Reducido (10%):</strong> Se aplica a bienes y servicios considerados de primera necesidad o de impulso económico clave. Ejemplos incluyen el transporte de viajeros, la hostelería y restauración, ciertos productos alimenticios y productos sanitarios.
+          </li>
+          <li>
+            <strong>IVA Superreducido (4%):</strong> Reservado para bienes de primera necesidad ineludible. Aplica a productos básicos como el pan, la leche, frutas y verduras, medicamentos, libros impresos, revistas y prensa.
+          </li>
+          <li>
+            <strong>Exento (0%):</strong> Existen actividades que, por su naturaleza, no llevan IVA. Las más comunes son los servicios educativos (clases de temarios normados), los servicios médicos y sanitarios, y los seguros.
+          </li>
+        </ul>
+
+        <h3 style={{ fontSize: '1.25rem', marginBottom: '1rem', color: 'var(--text)' }}>¿En qué se diferencian la Base Imponible y la Cuota?</h3>
+        <p style={{ color: 'var(--text-muted)', lineHeight: '1.7', marginBottom: '1.5rem' }}>
+          Toda factura oficial se compone de tres partes. La <strong>Base Imponible</strong> es el precio real del producto o servicio que es "propiedad" del vendedor. 
+          La <strong>Cuota de IVA</strong> o importe del impuesto es ese 21%, 10% o 4% que se calcula multiplicando el porcentaje por la base imponible. 
+          Al sumar la Base y la Cuota, obtenemos el <strong>Precio Total Final</strong>, que es el desembolso que el cliente va a realizar de su bolsillo.
+        </p>
+
+        <h2 style={{ fontSize: '1.5rem', marginTop: '2rem', marginBottom: '1.5rem', color: 'var(--primary)', borderBottom: '1px solid var(--border)', paddingBottom: '0.5rem' }}>
+          Preguntas Frecuentes (FAQ) sobre el cálculo del IVA
+        </h2>
+
+        <div style={{ marginBottom: '1.5rem' }}>
+          <h4 style={{ color: 'var(--text)', marginBottom: '0.5rem', fontSize: '1.1rem' }}>¿Cómo extraer el IVA de un precio total matemáticamente?</h4>
+          <p style={{ color: 'var(--text-muted)', lineHeight: '1.6' }}>
+            Un error matemático muy común es restarle el 21% directamente al precio total. ¡Eso está mal! Si un producto cuesta 121€ IVA incluido y le restas el 21%, te dará 95,59€. 
+            Para extraer correctamente el IVA, debes dividir el Precio Total entre 1 más el porcentaje de IVA en decimal. Si es el 21%, debes dividir el Total entre <strong>1.21</strong>. 
+            (Ejemplo: 121 / 1.21 = 100€ de Base Imponible exacta). Esta herramienta hace eso automáticamente por ti usando la pestaña "Total (Con IVA)".
+          </p>
+        </div>
+
+        <div style={{ marginBottom: '1.5rem' }}>
+          <h4 style={{ color: 'var(--text)', marginBottom: '0.5rem', fontSize: '1.1rem' }}>¿Cuándo debo utilizar la calculadora "Añadir IVA" vs "Extraer IVA"?</h4>
+          <p style={{ color: 'var(--text-muted)', lineHeight: '1.6' }}>
+            Si eres un proveedor que ha fijado sus precios en limpio y necesita saber cuánto tiene que poner en la línea de Total de su factura para enviarla al cliente, debes elegir <strong>"Suma de Base (Sin IVA)"</strong>. 
+            Si, por el contrario, has realizado una compra doméstica por internet o en un supermercado y quieres saber de esos euros que has gastado, cuántos son del producto real y cuántos se lleva el Estado, deberás elegir <strong>"Desglose desde Total (Con IVA)"</strong>.
+          </p>
+        </div>
+      </div>
       
     </div>
   );
