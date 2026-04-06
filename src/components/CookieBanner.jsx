@@ -22,7 +22,7 @@ const CookieBanner = () => {
     <div className="cookie-banner-overlay animate-slide-up">
       <div className="cookie-banner-content">
         <p>
-          Utilizamos cookies esenciales para el funcionamiento del sitio y análisis básico. No guardamos información financiera personal en servidores. Al hacer clic en "Aceptar", consientes nuestro uso de cookies de acuerdo a nuestra <a href="/legal">Política de Privacidad</a>.
+          Utilizamos LocalStorage para el funcionamiento del sitio y cookies de terceros de Google AdSense para análisis y personalización publicitaria. No guardamos información financiera personal. Al hacer clic en "Aceptar", consientes su uso según nuestra <a href="/cookies">Política de Cookies</a>.
         </p>
         <button onClick={acceptCookies} className="btn-primary btn-sm cookie-btn">
           Aceptar Cookies

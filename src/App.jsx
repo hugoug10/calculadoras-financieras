@@ -5,7 +5,11 @@ import SueldoNeto from './pages/SueldoNeto';
 import Autonomos from './pages/Autonomos';
 import InteresCompuesto from './pages/InteresCompuesto';
 import Iva from './pages/Iva';
-import Legal from './pages/Legal';
+import SobreNosotros from './pages/SobreNosotros';
+import Contacto from './pages/Contacto';
+import AvisoLegal from './pages/AvisoLegal';
+import Privacidad from './pages/Privacidad';
+import Cookies from './pages/Cookies';
 import CookieBanner from './components/CookieBanner';
 import Footer from './components/Footer';
 
@@ -21,7 +25,11 @@ function App() {
             <Route path="/autonomos" element={<Autonomos />} />
             <Route path="/interes" element={<InteresCompuesto />} />
             <Route path="/iva" element={<Iva />} />
-            <Route path="/legal" element={<Legal />} />
+            <Route path="/sobre-nosotros" element={<SobreNosotros />} />
+            <Route path="/contacto" element={<Contacto />} />
+            <Route path="/aviso-legal" element={<AvisoLegal />} />
+            <Route path="/privacidad" element={<Privacidad />} />
+            <Route path="/cookies" element={<Cookies />} />
           </Routes>
         </main>
         <Footer />
