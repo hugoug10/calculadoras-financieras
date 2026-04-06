@@ -15,6 +15,7 @@ const Navbar = () => {
           <Link to="/sueldo-neto" className="nav-link">Sueldo Neto</Link>
           <Link to="/autonomos" className="nav-link">Autónomos</Link>
           <Link to="/interes" className="nav-link">Interés Compuesto</Link>
+          <Link to="/guias" className="nav-link" style={{fontWeight:'bold'}}>Guías/Blog</Link>
           <div style={{width:'1px', height:'20px', backgroundColor:'var(--border)', margin:'0 10px'}}></div>
           <Link to="/sobre-nosotros" className="nav-link" style={{color:'var(--primary)'}}>Sobre Nosotros</Link>
         </div>

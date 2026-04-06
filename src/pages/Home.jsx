@@ -30,6 +30,26 @@ const Home = () => {
         </Link>
       </section>
 
+      {/* SECCIÓN PROMOCIONAL DE GUÍAS / BLOG (SEO Y ADSENSE) */}
+      <section className="seo-content glass" style={{ marginTop: '4rem', padding: '2.5rem', borderRadius: 'var(--radius-lg)', textAlign: 'center', maxWidth: '1000px', margin: '4rem auto 0 auto' }}>
+        <h2 style={{ fontSize: '1.5rem', marginBottom: '1rem', color: 'var(--text)' }}>Nuevas Guías Financieras</h2>
+        <p style={{ color: 'var(--text-muted)', marginBottom: '1.5rem' }}>Echa un vistazo a nuestros últimos artículos en profundidad para entender la fiscalidad:</p>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1.5rem' }}>
+          <Link to="/guias/nomina" style={{ padding: '1.5rem', border: '1px solid var(--border)', borderRadius: 'var(--radius)' }} className="tool-card">
+            📄 Cómo entender tu nómina
+          </Link>
+          <Link to="/guias/iva" style={{ padding: '1.5rem', border: '1px solid var(--border)', borderRadius: 'var(--radius)' }} className="tool-card">
+            🧾 Guía Definitiva del IVA
+          </Link>
+          <Link to="/guias/interes-compuesto" style={{ padding: '1.5rem', border: '1px solid var(--border)', borderRadius: 'var(--radius)' }} className="tool-card">
+            📈 Interés Compuesto a largo plazo
+          </Link>
+        </div>
+        <div style={{ marginTop: '2rem' }}>
+          <Link to="/guias" className="btn-primary" style={{ padding: '0.75rem 1.5rem' }}>Ver todas las guías</Link>
+        </div>
+      </section>
+
       {/* TEXTO INFORMATIVO HOME PARA ADSENSE */}
       <section className="seo-content glass" style={{ marginTop: '4rem', padding: '2.5rem', borderRadius: 'var(--radius-lg)', textAlign: 'left', maxWidth: '800px', margin: '4rem auto 0 auto' }}>
         <h2 style={{ fontSize: '1.5rem', marginBottom: '1.5rem', color: 'var(--primary)' }}>Tus finanzas bajo control</h2>
