@@ -31,18 +31,39 @@ const Home = () => {
       </section>
 
       {/* SECCIÓN PROMOCIONAL DE GUÍAS / BLOG (SEO Y ADSENSE) */}
-      <section className="seo-content glass" style={{ marginTop: '4rem', padding: '2.5rem', borderRadius: 'var(--radius-lg)', textAlign: 'center', maxWidth: '1000px', margin: '4rem auto 0 auto' }}>
-        <h2 style={{ fontSize: '1.5rem', marginBottom: '1rem', color: 'var(--text)' }}>Nuevas Guías Financieras</h2>
-        <p style={{ color: 'var(--text-muted)', marginBottom: '1.5rem' }}>Echa un vistazo a nuestros últimos artículos en profundidad para entender la fiscalidad:</p>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1.5rem' }}>
-          <Link to="/guias/nomina" style={{ padding: '1.5rem', border: '1px solid var(--border)', borderRadius: 'var(--radius)' }} className="tool-card">
-            📄 Cómo entender tu nómina
+      <section className="seo-content glass" style={{ marginTop: '4rem', padding: '2.5rem', borderRadius: 'var(--radius-lg)', textAlign: 'center', maxWidth: '1100px', margin: '4rem auto 0 auto' }}>
+        <h2 style={{ fontSize: '1.5rem', marginBottom: '1rem', color: 'var(--text)' }}>Guías Financieras en Profundidad</h2>
+        <p style={{ color: 'var(--text-muted)', marginBottom: '1.5rem' }}>Artículos detallados para entender la fiscalidad española, el ahorro y la inversión:</p>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(230px, 1fr))', gap: '1.25rem' }}>
+          <Link to="/guias/nomina" style={{ padding: '1.25rem', border: '1px solid var(--border)', borderRadius: 'var(--radius)', textAlign: 'left' }} className="tool-card">
+            <div style={{ fontSize: '1.5rem', marginBottom: '0.5rem' }}>📄</div>
+            <strong>Entender tu Nómina</strong>
+            <p style={{ color: 'var(--text-muted)', fontSize: '0.85rem', marginTop: '0.4rem' }}>Devengos, deducciones y retenciones explicadas.</p>
           </Link>
-          <Link to="/guias/iva" style={{ padding: '1.5rem', border: '1px solid var(--border)', borderRadius: 'var(--radius)' }} className="tool-card">
-            🧾 Guía Definitiva del IVA
+          <Link to="/guias/iva" style={{ padding: '1.25rem', border: '1px solid var(--border)', borderRadius: 'var(--radius)', textAlign: 'left' }} className="tool-card">
+            <div style={{ fontSize: '1.5rem', marginBottom: '0.5rem' }}>🧾</div>
+            <strong>Guía Definitiva del IVA</strong>
+            <p style={{ color: 'var(--text-muted)', fontSize: '0.85rem', marginTop: '0.4rem' }}>Tipos, exenciones y liquidación trimestral.</p>
           </Link>
-          <Link to="/guias/interes-compuesto" style={{ padding: '1.5rem', border: '1px solid var(--border)', borderRadius: 'var(--radius)' }} className="tool-card">
-            📈 Interés Compuesto a largo plazo
+          <Link to="/guias/irpf" style={{ padding: '1.25rem', border: '1px solid var(--border)', borderRadius: 'var(--radius)', textAlign: 'left' }} className="tool-card">
+            <div style={{ fontSize: '1.5rem', marginBottom: '0.5rem' }}>🏛️</div>
+            <strong>Cómo funciona el IRPF</strong>
+            <p style={{ color: 'var(--text-muted)', fontSize: '0.85rem', marginTop: '0.4rem' }}>Tramos, deducciones y la Declaración de la Renta.</p>
+          </Link>
+          <Link to="/guias/ahorro" style={{ padding: '1.25rem', border: '1px solid var(--border)', borderRadius: 'var(--radius)', textAlign: 'left' }} className="tool-card">
+            <div style={{ fontSize: '1.5rem', marginBottom: '0.5rem' }}>🐖</div>
+            <strong>Ahorro Personal desde Cero</strong>
+            <p style={{ color: 'var(--text-muted)', fontSize: '0.85rem', marginTop: '0.4rem' }}>Fondo de emergencia, regla 50/30/20 y más.</p>
+          </Link>
+          <Link to="/guias/interes-compuesto" style={{ padding: '1.25rem', border: '1px solid var(--border)', borderRadius: 'var(--radius)', textAlign: 'left' }} className="tool-card">
+            <div style={{ fontSize: '1.5rem', marginBottom: '0.5rem' }}>📈</div>
+            <strong>Interés Compuesto</strong>
+            <p style={{ color: 'var(--text-muted)', fontSize: '0.85rem', marginTop: '0.4rem' }}>El motor silencioso de la riqueza a largo plazo.</p>
+          </Link>
+          <Link to="/guias/guia-autonomos" style={{ padding: '1.25rem', border: '1px solid var(--border)', borderRadius: 'var(--radius)', textAlign: 'left' }} className="tool-card">
+            <div style={{ fontSize: '1.5rem', marginBottom: '0.5rem' }}>💼</div>
+            <strong>Guía Completa Autónomos</strong>
+            <p style={{ color: 'var(--text-muted)', fontSize: '0.85rem', marginTop: '0.4rem' }}>Cuota, IVA, IRPF y gastos deducibles.</p>
           </Link>
         </div>
         <div style={{ marginTop: '2rem' }}>
