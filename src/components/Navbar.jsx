@@ -1,24 +1,28 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { TrendingUp } from 'lucide-react';
 import './Navbar.css';
 
 const Navbar = () => {
   return (
-    <nav className="navbar glass">
+    <nav className="navbar">
       <div className="navbar-container">
         <Link to="/" className="navbar-logo">
-          <span className="logo-icon">💰</span>
-          <h1>FinanCalc</h1>
+          <div className="navbar-logo-icon">
+            <TrendingUp size={16} strokeWidth={2.5} />
+          </div>
+          <span className="navbar-logo-text">Finan<span>Calc</span></span>
         </Link>
+
         <div className="navbar-links">
           <Link to="/" className="nav-link">Inicio</Link>
           <Link to="/sueldo-neto" className="nav-link">Sueldo Neto</Link>
           <Link to="/autonomos" className="nav-link">Autónomos</Link>
           <Link to="/interes" className="nav-link">Interés Compuesto</Link>
-          <Link to="/guias" className="nav-link" style={{fontWeight:'bold'}}>Guías/Blog</Link>
-          <div style={{width:'1px', height:'20px', backgroundColor:'var(--border)', margin:'0 10px'}}></div>
+          <Link to="/guias" className="nav-link">Guías</Link>
+          <div className="nav-divider" />
           <Link to="/sobre-nosotros" className="nav-link">Sobre Nosotros</Link>
-          <Link to="/contacto" className="nav-link" style={{color:'var(--primary)', fontWeight:'bold'}}>Contacto</Link>
+          <Link to="/contacto" className="nav-link nav-link-cta">Contacto</Link>
         </div>
       </div>
     </nav>

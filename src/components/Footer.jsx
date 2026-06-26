@@ -2,22 +2,36 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Footer.css';
 
-const Footer = () => {
-  return (
-    <footer className="footer-main">
-      <div className="footer-content">
-        <p className="copyright">© {new Date().getFullYear()} FinanCalc. Todos los cálculos son orientativos y 100% locales.</p>
-        
-        <div className="footer-links" style={{ display: 'flex', gap: '15px', flexWrap: 'wrap', justifyContent: 'center', marginTop: '10px' }}>
-          <Link to="/sobre-nosotros">Sobre Nosotros</Link>
-          <Link to="/contacto">Contacto</Link>
-          <Link to="/aviso-legal">Aviso Legal</Link>
-          <Link to="/privacidad">Privacidad</Link>
-          <Link to="/cookies">Cookies</Link>
+const links = [
+  { to: '/sobre-nosotros', label: 'Sobre Nosotros' },
+  { to: '/contacto',       label: 'Contacto' },
+  { to: '/aviso-legal',    label: 'Aviso Legal' },
+  { to: '/privacidad',     label: 'Privacidad' },
+  { to: '/cookies',        label: 'Cookies' },
+];
+
+const Footer = () => (
+  <footer className="footer-main">
+    <div className="footer-content">
+      <div>
+        <div className="footer-brand">
+          Finan<span>Calc</span>
         </div>
+        <p className="copyright" style={{ marginTop: '0.35rem' }}>
+          © {new Date().getFullYear()} FinanCalc · Cálculos orientativos, 100% locales y gratuitos.
+        </p>
       </div>
-    </footer>
-  );
-};
+
+      <div className="footer-links">
+        {links.map(({ to, label }, i) => (
+          <React.Fragment key={to}>
+            {i > 0 && <span className="footer-dot" />}
+            <Link to={to}>{label}</Link>
+          </React.Fragment>
+        ))}
+      </div>
+    </div>
+  </footer>
+);
 
 export default Footer;
